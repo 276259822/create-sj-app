@@ -1,0 +1,8 @@
+[
+  {
+    "name": "vite-react",
+    "packageName": "react-vite-boilerplate",
+    "url": "https://github.com/sj-distributor/react-vite-boilerplater",
+    "template": "github:sj-distributor/react-vite-boilerplate#master"
+  }
+]
