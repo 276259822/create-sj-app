@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 
+const fs = require("fs");
 const ora = require("ora");
 const download = require("download-git-repo");
 const symbols = require("log-symbols");
@@ -8,6 +9,7 @@ const figlet = require("figlet");
 const inquirer = require("inquirer");
 const templates = require("../template.json");
 const utils = require("./utils");
+const path = require("path");
 
 chalk.level = 1;
 
@@ -16,6 +18,22 @@ const options = [
     name: "name",
     type: "input",
     message: "请输入项目名称：",
+    validate: function (input) {
+      const done = this.async();
+
+      if (!input) {
+        done(chalk.red("Name is required"));
+        return;
+      }
+
+      const rootPath = path.join(process.cwd(), input);
+      if (fs.existsSync(rootPath)) {
+        done(chalk.red(`directory already exists: ${rootPath}`));
+        return;
+      }
+
+      done(null, true);
+    },
   },
   {
     name: "template",
