@@ -2,7 +2,7 @@
   {
     "name": "vite-react",
     "packageName": "react-vite-boilerplate",
-    "url": "https://github.com/sj-distributor/react-vite-boilerplater",
+    "url": "https://github.com/sj-distributor/react-vite-boilerplate",
     "template": "github:sj-distributor/react-vite-boilerplate#master"
   }
 ]
