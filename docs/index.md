@@ -26,3 +26,5 @@
 `yarn create sj-app`
 1、全局安装`create-sj-app`
 2、执行`create-sj-app`的`package.json`中`bin`
+
+## github actions
