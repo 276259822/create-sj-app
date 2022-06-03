@@ -29,4 +29,6 @@
 
 ## github actions
 
+`https://docs.github.com/cn/actions/publishing-packages/publishing-nodejs-packages`
+
 ## npm Access Tokens
